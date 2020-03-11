@@ -16,11 +16,11 @@ try:
     new_window = browser.window_handles[1]
     browser.switch_to.window(new_window)
 
-    value1 = calc(int(browser.find_element_by_id("input_value").text))
-    field1 = browser.find_element_by_id("answer")
+    value_main = calc(int(browser.find_element_by_id("input_value").text))
+    field = browser.find_element_by_id("answer")
     button2 = browser.find_element_by_css_selector("[type='submit']")
     
-    field1.send_keys(value1)
+    field.send_keys(value_main)
     button2.click()
 
 finally:
